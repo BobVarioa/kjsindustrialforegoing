@@ -10,7 +10,7 @@ buildscript {
 }
 
 plugins {
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
 apply plugin: 'org.spongepowered.mixin'
@@ -163,9 +163,9 @@ dependencies {
 
     // Ars Nouveau
     implementation fg.deobf("curse.maven:industrial-foregoing-266515:$industrial_foregoing_version")
-    implementation fg.deobf("curse.maven:titanium-287342:4484497")
+    implementation fg.deobf("curse.maven:titanium-287342:5468426")
 
-    runtimeOnly fg.deobf("curse.maven:jei-238222:4615177")
+    runtimeOnly fg.deobf("curse.maven:jei-238222:5610694")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }

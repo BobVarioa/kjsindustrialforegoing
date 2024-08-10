@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[47,)"
 license = "All Rights Reserved"
 [[mods]]
     modId = "kjsindustrialforegoing"
@@ -12,24 +12,24 @@ license = "All Rights Reserved"
 [[dependencies.kjsindustrialforegoing]]
     modId = "forge"
     mandatory = true
-    versionRange = "[43,)"
+    versionRange = "[47,)"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.kjsindustrialforegoing]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.19.2,)"
+    versionRange = "[1.20.1,)"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.kjsindustrialforegoing]]
     modId = "kubejs"
     mandatory = true
-    versionRange = "[1902.6.1-build.282,)"
+    versionRange = "[2001.6.3-build.18,)"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.kjsindustrialforegoing]]
     modId = "industrialforegoing"
     mandatory = true
-    versionRange = "[3.3.2.3,)"
+    versionRange = "[3.5.7,)"
     ordering = "NONE"
     side = "BOTH"
