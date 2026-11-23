@@ -16,7 +16,8 @@ public interface LaserDrillFluidRecipe {
     RecipeKey<SizedFluidIngredient> OUTPUT = SizedFluidIngredientComponent.FLAT.outputKey("output");
     RecipeKey<List<LaserDrillRarity>> RARITY = IndustrialForegoingComponents.LASER_DRILL_RARITY.instance()
             .asList()
-            .otherKey("rarity");
+            .otherKey("rarity")
+            .optional(List.of());
 
     RecipeKey<Ingredient> CATALYST = IngredientComponent.INGREDIENT.inputKey("catalyst");
 
