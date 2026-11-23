@@ -1,25 +1,25 @@
 ServerEvents.recipes(event => {
-	event.recipes.industrialforegoing.crusher(
-		'minecraft:gravel',
-		'minecraft:cobblestone'
-	)
+	event.recipes.industrialforegoing.crusher( // the pickaxe action in the stonework factory
+		'minecraft:tnt',
+		'minecraft:sand'
+	);
 
-	event.recipes.industrialforegoing.dissolution_chamber(
-		['minecraft:dirt', 'minecraft:sand'],
-		Fluid.of('minecraft:water', 500),
-		Item.of('minecraft:diamond', 2),
-		200
-	).outputFluid(Fluid.of('minecraft:lava', 100))
+    event.recipes.industrialforegoing.dissolution_chamber(
+        ["minecraft:tnt"], // input items
+        "minecraft:water", // input fluid
+        "minecraft:sand", // output item
+        100 // time
+    ).outputFluid("minecraft:water"); // output fluid (optional)
 
 	event.recipes.industrialforegoing.fluid_extractor(
-		'minecraft:oak_log',
-		'minecraft:stripped_oak_log',
-		0.05,
-		Fluid.of('industrialforegoing:latex', 8)
-	)
+        "minecraft:tnt", // input block
+        "minecraft:sand", // output block
+        0.5, // break chance
+        "minecraft:lava" // output fluid
+    );
 
 	event.recipes.industrialforegoing.laser_drill_ore(
-		{ item: 'minecraft:diamond', count: 1 },
+		{ item: 'minecraft:tnt', count: 1 },
 		'industrialforegoing:red_laser_lens',
 		[{
 			biome_filter: { whitelist: [], blacklist: [] },
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
 	)
 
 	event.recipes.industrialforegoing.laser_drill_fluid(
-		Fluid.of('industrialforegoing:ether_gas', 10),
+		Fluid.of('minecraft:lava', 10),
 		'industrialforegoing:purple_laser_lens',
 		[{
 			biome_filter: { whitelist: [], blacklist: [] },
@@ -40,11 +40,14 @@ ServerEvents.recipes(event => {
 			depth_max: 256,
 			weight: 8
 		}],
-		{ entity: { type: 'minecraft:wither' }, data: {}, display: '' }
+		{ entity: { type: 'minecraft:zombie' }, data: {}, display: '' }
 	)
 
-	event.recipes.industrialforegoing.stonework_generate(
-		'minecraft:obsidian',
-		1000, 1000, 0, 1000
-	)
+    event.recipes.industrialforegoing.stonework_generate(
+        "minecraft:tnt",
+        100, // water needed
+        100, // lava needed
+        50, // water consumed
+        50 // lava consumed
+    );
 })
